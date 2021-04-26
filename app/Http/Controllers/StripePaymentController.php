@@ -43,7 +43,7 @@ class StripePaymentController extends Controller
 
         Stripe\Charge::create([
 
-            "amount" => $request->amount * $request->amount,
+            "amount" => $request->amount * 100,
             "currency" => "usd",
             "source" => $request->stripeToken,
             "description" => "Test payment."
